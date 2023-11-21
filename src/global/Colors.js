@@ -10,4 +10,6 @@ export const LIGHT_VIOLET = '#D2BAF5';
 
 export const VERY_LIGHT_VIOLET = '#F6F3FA';
 
-export const LITE_GREY = '#808080';
+export const DARY_GREY = '#727682';
+
+export const LIGHT_GREY = '#B5C0C8';

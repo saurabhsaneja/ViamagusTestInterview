@@ -106,8 +106,34 @@ const Home = ({navigation}) => {
                 </View>
               </View>
             </View>
-            <View style={styles.infoWhiteContainer}>
-              
+            <View style={styles.infoWhiteContainer}></View>
+            <View style={styles.infoVeryLightContainer}>
+              <View style={styles.infoVeryLightTopRow}>
+                <View style={styles.infoVeryLightTopLeftRow}>
+                  <Image source={require('assets/images/player-icon.png')} />
+                  <MyText
+                    text="355 Players"
+                    fontSize={14}
+                    fontFamily="bold"
+                    textColor={Colors.DARK_GREY}
+                    style={{marginLeft: 8}}
+                  />
+                </View>
+                <View style={styles.infoVeryLightTopRightRow}>
+                  <Image source={require('assets/images/chart-icon.png')} />
+                  <MyText
+                    text="View chart"
+                    fontSize={14}
+                    fontFamily="bold"
+                    textColor={Colors.DARK_GREY}
+                    style={{marginLeft: 8}}
+                  />
+                </View>
+              </View>
+              <View style={styles.infoVeryLightMiddleRow}>
+                <View style={styles.infoVeryLightMiddleLeftLine}></View>
+                <View style={styles.infoVeryLightMiddleRightLine}></View>
+              </View>
             </View>
           </View>
         </View>
