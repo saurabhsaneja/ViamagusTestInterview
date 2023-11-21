@@ -16,7 +16,8 @@ import {NavigationContainer} from '@react-navigation/native';
 //import : globals
 import {Colors} from 'global/Index';
 //import : stack
-import MainStack from '/src/MainStack/MainStack';
+// import MainStack from '/src/MainStack/MainStack';
+import UserBottomTab from './src/navigation/UserBottomTab/UserBottomTab';
 
 const App = () => {
 
@@ -24,7 +25,7 @@ const App = () => {
     <NavigationContainer>
       <SafeAreaView style={{flex: 1}}>
         <StatusBar backgroundColor={Colors.THEME_VIOLET} />
-        <MainStack />
+        <UserBottomTab />
       </SafeAreaView>
     </NavigationContainer>
   );
