@@ -6,7 +6,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: 20,
+    padding: 17,
+    marginTop: 24,
     backgroundColor: Colors.THEME_GREEN,
   },
 });

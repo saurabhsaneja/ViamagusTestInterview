@@ -27,12 +27,7 @@ const Home = ({navigation}) => {
   //UI
   return (
     <View style={styles.container}>
-      <MyHeader
-        Title="Home"
-        hasDrawerButton={true}
-        isBorderRadius={false}
-        hideAddMore={false}
-      />
+      <MyHeader Title="Home" />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.mainView}>
           <MyText
