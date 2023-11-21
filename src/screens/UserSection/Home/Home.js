@@ -157,12 +157,23 @@ const Home = ({navigation}) => {
                     textColor={Colors.LIGHT_GREY}
                     style={{textTransform: 'uppercase', marginBottom: 8}}
                   />
-                  <MyText
-                    text="5"
-                    fontSize={12}
-                    fontFamily="bold"
-                    textColor={Colors.THEME_BLACK}
-                  />
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                      justifyContent: 'flex-end',
+                    }}>
+                    <MyText
+                      text="5"
+                      fontSize={12}
+                      fontFamily="bold"
+                      textColor={Colors.THEME_BLACK}
+                    />
+                    <Image
+                      source={require('assets/images/yellow-circle.png')}
+                      style={{marginLeft: 8}}
+                    />
+                  </View>
                 </View>
               </View>
               <MyText
