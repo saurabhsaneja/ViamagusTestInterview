@@ -106,7 +106,100 @@ const Home = ({navigation}) => {
                 </View>
               </View>
             </View>
-            <View style={styles.infoWhiteContainer}></View>
+            <View style={styles.infoWhiteContainer}>
+              {/* 77 + 46 + 35 + 76 */}
+              <View style={styles.infoWhiteTopRow}>
+                <View>
+                  <MyText
+                    text="Prize Pool"
+                    fontSize={12}
+                    fontFamily="medium"
+                    textColor={Colors.LIGHT_GREY}
+                    style={{textTransform: 'uppercase', marginBottom: 8}}
+                  />
+                  <MyText
+                    text="$12,000"
+                    fontSize={12}
+                    fontFamily="bold"
+                    textColor={Colors.THEME_BLACK}
+                  />
+                </View>
+                <View>
+                  <MyText
+                    text="Under"
+                    fontSize={12}
+                    fontFamily="medium"
+                    textColor={Colors.LIGHT_GREY}
+                    style={{textTransform: 'uppercase', marginBottom: 8}}
+                  />
+                  <MyText
+                    text="3.25x"
+                    fontSize={12}
+                    fontFamily="bold"
+                    textColor={Colors.THEME_BLACK}
+                  />
+                </View>
+                <View>
+                  <MyText
+                    text="Over"
+                    fontSize={12}
+                    fontFamily="medium"
+                    textColor={Colors.LIGHT_GREY}
+                    style={{textTransform: 'uppercase', marginBottom: 8}}
+                  />
+                  <MyText
+                    text="1.25x"
+                    fontSize={12}
+                    fontFamily="bold"
+                    textColor={Colors.THEME_BLACK}
+                  />
+                </View>
+                <View>
+                  <MyText
+                    text="Entry Fees"
+                    fontSize={12}
+                    fontFamily="medium"
+                    textColor={Colors.LIGHT_GREY}
+                    style={{textTransform: 'uppercase', marginBottom: 8}}
+                  />
+                  <MyText
+                    text="5"
+                    fontSize={12}
+                    fontFamily="bold"
+                    textColor={Colors.THEME_BLACK}
+                  />
+                </View>
+              </View>
+              <MyText
+                text="What's your prediction?"
+                fontSize={14}
+                fontFamily="bold"
+                textColor={Colors.DARY_GREY}
+                style={{marginTop: 20, marginBottom: 14}}
+              />
+              <View style={styles.infoButtonsRow}>
+                <IconButton
+                  text="Under"
+                  color={'#452C55'}
+                  isIcon
+                  onPress={() => {}}
+                  Icon={
+                    <Image source={require('assets/images/down-arrow.png')} />
+                  }
+                  style={{width: '45%'}}
+                />
+                <IconButton
+                  text="Over"
+                  isIcon
+                  onPress={() => {}}
+                  Icon={
+                    <Image source={require('assets/images/up-arrow.png')} />
+                  }
+                  style={{width: '45%'}}
+                />
+              </View>
+            </View>
+
             <View style={styles.infoVeryLightContainer}>
               <View style={styles.infoVeryLightTopRow}>
                 <View style={styles.infoVeryLightTopLeftRow}>
@@ -134,6 +227,22 @@ const Home = ({navigation}) => {
                 <View style={styles.infoVeryLightMiddleLeftLine}></View>
                 <View style={styles.infoVeryLightMiddleRightLine}></View>
               </View>
+              <View style={styles.infoVeryLightBottomRow}>
+                <MyText
+                  text="232 predicted under"
+                  fontSize={12}
+                  fontFamily="bold"
+                  textColor={Colors.LIGHT_GREY}
+                  style={{}}
+                />
+                <MyText
+                  text="123 predicted over"
+                  fontSize={12}
+                  fontFamily="bold"
+                  textColor={Colors.LIGHT_GREY}
+                  style={{}}
+                />
+              </View>
             </View>
           </View>
         </View>
@@ -142,3 +251,27 @@ const Home = ({navigation}) => {
   );
 };
 export default Home;
+
+const IconButton = ({
+  text,
+  onPress,
+  color = Colors.THEME_VIOLET,
+  isIcon = false,
+  Icon = <Image source={require('assets/images/down-arrow.png')} />,
+  style = {},
+}) => {
+  return (
+    <TouchableOpacity
+      onPress={onPress}
+      style={[styles.iconButtonContainer, style, {backgroundColor: color}]}>
+      {isIcon ? Icon : null}
+      <MyText
+        text={text}
+        fontSize={14}
+        fontFamily="bold"
+        textColor={Colors.WHITE}
+        style={{marginLeft: isIcon ? 4 : 0}}
+      />
+    </TouchableOpacity>
+  );
+};

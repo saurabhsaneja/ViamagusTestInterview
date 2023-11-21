@@ -63,7 +63,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 10,
     overflow: 'hidden',
-    marginTop: 14
+    marginTop: 14,
   },
   infoVeryLightMiddleLeftLine: {
     flex: 75,
@@ -74,5 +74,29 @@ export const styles = StyleSheet.create({
     flex: 25,
     backgroundColor: '#2DABAD',
     height: 10,
+  },
+  infoVeryLightBottomRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginTop: 12,
+  },
+  infoWhiteTopRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  iconButtonContainer: {
+    height: 40,
+    borderRadius: 45,
+    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  infoButtonsRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
 });
