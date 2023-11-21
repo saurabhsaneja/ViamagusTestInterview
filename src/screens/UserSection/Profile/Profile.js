@@ -37,32 +37,50 @@ const Profile = ({navigation}) => {
             textColor={Colors.THEME_BLACK}
           />
         </View>
+        <View style={styles.badgesContainer}>
+          {badgesData?.map(el => (
+            <Badge title={el?.title} desc={el?.desc} />
+          ))}
+        </View>
       </ScrollView>
     </View>
   );
 };
 export default Profile;
 
-const IconButton = ({
-  text,
-  onPress,
-  color = Colors.THEME_VIOLET,
-  isIcon = false,
-  Icon = <Image source={require('assets/images/down-arrow.png')} />,
-  style = {},
-}) => {
+const badgesData = [
+  {
+    id: '1',
+    title: 'First Stripe Earned',
+    desc: 'Top 10% of highest spending players in a month',
+  },
+  {
+    id: '2',
+    title: 'First Stripe Earned',
+    desc: 'Top 10% of highest spending players in a month',
+  },
+];
+
+const Badge = ({title, desc}) => {
   return (
-    <TouchableOpacity
-      onPress={onPress}
-      style={[styles.iconButtonContainer, style, {backgroundColor: color}]}>
-      {isIcon ? Icon : null}
-      <MyText
-        text={text}
-        fontSize={14}
-        fontFamily="bold"
-        textColor={Colors.WHITE}
-        style={{marginLeft: isIcon ? 4 : 0}}
-      />
-    </TouchableOpacity>
+    <View style={styles.badgeBox}>
+      <Image source={require('assets/images/badge-icon.png')} />
+      <View style={styles.badgeRightBox}>
+        <MyText
+          text={title}
+          fontSize={14}
+          fontFamily="bold"
+          textColor={Colors.THEME_BLACK}
+          style={{marginBottom: 8}}
+        />
+        <MyText
+          text={desc}
+          fontSize={14}
+          fontFamily="medium"
+          textColor={Colors.DARK_GREY}
+          lineHeight={20}
+        />
+      </View>
+    </View>
   );
 };
