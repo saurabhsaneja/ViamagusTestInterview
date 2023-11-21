@@ -19,11 +19,15 @@ import MyText from 'components/MyText/MyText';
 import {Colors, Constant, Images, ScreenNames, Service} from 'global/Index';
 //styles
 import {styles} from './HomeStyle';
+import SubmitPrediction from '../../../modals/SubmitPrediction/SubmitPrediction';
+import ValuePicker from 'rn-value-picker';
 
 const Home = ({navigation}) => {
   //variables
   //states
-
+  const [showModal, setShowModal] = useState(false);
+  const [numberChosen, setNumberChosen] = useState('');
+  const [showPicker, setShowPicker] = useState(false);
   //UI
   return (
     <View style={styles.container}>
@@ -197,7 +201,9 @@ const Home = ({navigation}) => {
                 <IconButton
                   text="Over"
                   isIcon
-                  onPress={() => {}}
+                  onPress={() => {
+                    setShowModal(true);
+                  }}
                   Icon={
                     <Image source={require('assets/images/up-arrow.png')} />
                   }
@@ -253,6 +259,22 @@ const Home = ({navigation}) => {
           </View>
         </View>
       </ScrollView>
+      <SubmitPrediction
+        visible={showModal}
+        setVisibility={setShowModal}
+        numberChosen={numberChosen}
+        setNumberChosen={setNumberChosen}
+        setShowPicker={setShowPicker}
+      />
+      <ValuePicker
+        visible={showPicker}
+        setVisibility={setShowPicker}
+        Title="Your Weight"
+        unit=""
+        minValue={20}
+        maxValue={150}
+        setValue={setNumberChosen}
+      />
     </View>
   );
 };
