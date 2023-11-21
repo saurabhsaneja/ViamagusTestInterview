@@ -43,7 +43,7 @@ const SubmitPrediction = ({
             text="Entry Tickets"
             fontSize={12}
             textColor={Colors.DARK_GREY}
-            fontFamily="bold"
+            fontFamily="medium"
             style={{textTransform: 'uppercase', marginTop: 28}}
           />
           <IconButton
