@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
   },
   mainView: {
     padding: 17,
+    alignItems: 'center',
   },
   badgesContainer: {
     backgroundColor: Colors.VERY_LIGHT_VIOLET,
@@ -30,4 +31,47 @@ export const styles = StyleSheet.create({
     marginLeft: 16,
     width: '75%',
   },
+  tabsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    height: 60,
+    width: '100%',
+  },
+  tabView: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '50%',
+    height: 60,
+  },
+  selectedTabView: {
+    borderBottomWidth: 2,
+    borderBottomColor: Colors.THEME_VIOLET,
+  },
+  seperator: {
+    backgroundColor: Colors.VERY_LIGHT_VIOLET,
+    height: 4,
+    width: '100%',
+  },
+  logoutContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 20,
+  },
+  underOverContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 20,
+    width: '95%',
+    alignSelf: 'center',
+    borderColor: '#EEEAF3',
+    borderRadius: 5,
+    borderWidth: 1,
+    marginTop: 34,
+    marginBottom: 28,
+  },
+  changePercentRow: {
+    flexDirection:'row',
+    alignItems:'center'
+  }
 });
